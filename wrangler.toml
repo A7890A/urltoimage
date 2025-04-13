@@ -1,10 +1,11 @@
 # wrangler.toml
 name = "hidden-qr"
-compatibility_date = "2023-08-16"
+compatibility_date = "2024-03-20"
+main = "public/qr-worker.js"  # Worker入口文件
 
-[pages]
-build.command = ""
-build.upload_dir = "public"
+[site]
+bucket = "./public"           # 静态资源目录
+entry-point = "public"        # Pages入口目录
 
-[build.upload]
-format = "service-worker"
+[build]
+upload.format = "service-worker"
