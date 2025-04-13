@@ -1,0 +1,13 @@
+{
+  "name": "hidden-qr",
+  "scripts": {
+    "dev": "wrangler pages dev public --port 3000",
+    "deploy": "wrangler pages deploy public --project-name hidden-qr",
+    "predeploy": "npm run validate",
+    "validate": "eslint public/ && wrangler types"
+  },
+  "devDependencies": {
+    "wrangler": "^4.12.0",
+    "eslint": "^9.3.0"
+  }
+}
