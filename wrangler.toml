@@ -5,7 +5,7 @@ main = "./public/qr-worker.js"  # Worker入口文件
 node_compat = true              # 启用Node.js兼容模式
 
 [build]
-command = ""                    # 无构建步骤
+command = "npm run build"                    # 无构建步骤
 upload.format = "modules"       # ESM模块格式
 
 [site]
