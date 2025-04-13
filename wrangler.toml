@@ -1,11 +1,9 @@
-# wrangler.toml
 name = "hidden-qr"
-compatibility_date = "2024-03-20"
-main = "public/qr-worker.js"  # 唯一入口定义
+   compatibility_date = "2024-03-20"
 
-[site]
-bucket = "./public"          # 静态资源目录
+   [site]
+   bucket = "./public"
+   entry-point = "public"
 
-[build]
-upload.format = "service-worker"
-command = "echo 'No build needed'"
+   [build]
+   command = "echo 'No build needed'"
