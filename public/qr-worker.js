@@ -1,3 +1,5 @@
+export default {};
+
 importScripts('./lib/qrcode.js');
 
 class QRProcessor {
