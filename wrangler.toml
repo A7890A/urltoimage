@@ -1,0 +1,7 @@
+# wrangler.toml
+name = "hidden-qr"
+compatibility_date = "2023-08-16"
+
+[pages]
+build.command = ""
+build.upload_dir = "public"
