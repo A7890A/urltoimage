@@ -124,9 +124,9 @@ class QRGenerator {
 
     this.worker.postMessage({ 
       url,
-      imageData,
-      width: canvas.width,
-      height: canvas.height
+      imageData:Array.from(imageData.data),
+      width: imageData.width,
+      height: imageData.height
     }, [imageData.data.buffer]);
 
     this.worker.onmessage = (e) => {
@@ -204,7 +204,7 @@ class QRGenerator {
 new QRGenerator();
 
 // 注册Service Worker（可选）
-if ('serviceWorker' in navigator) {
+/* if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then(registration => {
@@ -214,4 +214,4 @@ if ('serviceWorker' in navigator) {
         console.log('ServiceWorker注册失败:', err);
       });
   });
-}
+}*/
