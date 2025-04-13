@@ -22,3 +22,6 @@ EDGE_THRESHOLD = "50"           # 边缘检测灵敏度
 # 缓存控制
 [env.production]
 CF_PAGES_CACHE_BUST = "v3"      # 强制刷新缓存
+
+[build.environment]
+NODE_VERSION = "20"  # 使用长期支持版
