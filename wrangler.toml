@@ -1,12 +1,24 @@
-# 部署配置
+# Cloudflare Pages 配置
 name = "hidden-qr"
 compatibility_date = "2024-03-20"
-main = "./public/qr-worker.js"  # 主入口文件
+main = "./public/qr-worker.js"  # Worker入口文件
 node_compat = true              # 启用Node.js兼容模式
 
 [build]
-command = ""                    # 无需构建步骤
-upload.format = "modules"       # 使用ESM模块格式
+command = ""                    # 无构建步骤
+upload.format = "modules"       # ESM模块格式
 
 [site]
 bucket = "./public"             # 静态资源目录
+include = ["**/*"]              # 包含所有文件
+exclude = ["node_modules"]      # 排除目录
+
+# 性能优化参数
+[vars]
+MAX_IMAGE_SIZE = "2000"         # 最大处理尺寸(px)
+QR_CELL_SIZE = "3"              # 二维码单元尺寸
+EDGE_THRESHOLD = "50"           # 边缘检测灵敏度
+
+# 缓存控制
+[env.production]
+CF_PAGES_CACHE_BUST = "v3"      # 强制刷新缓存
