@@ -1,4 +1,4 @@
-importScripts('./lib/qrcode.min.js');
+importScripts('./lib/qrcode.js');
 
 class QRProcessor {
     static process({ url, imageData }) {
