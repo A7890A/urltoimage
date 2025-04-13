@@ -1,9 +1,10 @@
+# wrangler.toml
 name = "hidden-qr"
-   compatibility_date = "2024-03-20"
+compatibility_date = "2024-03-20"
+main = "./public/qr-worker.js"  # 关键配置
 
-   [site]
-   bucket = "./public"
-   entry-point = "public"
+[site]
+bucket = "./public"             # 静态资源目录
 
-   [build]
-   command = "echo 'No build needed'"
+[build]
+command = "echo 'No build needed'"
