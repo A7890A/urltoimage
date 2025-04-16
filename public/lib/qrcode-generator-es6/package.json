@@ -1,0 +1,29 @@
+{
+  "name": "qrcode-generator-es6",
+  "version": "1.1.4",
+  "description": "ES6 QR Code generation module with colors and logos",
+  "author": "Kazuhiko Arase",
+  "contributors": [
+    "rendaw"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/rendaw/qrcode-generator-es6.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/rendaw/qrcode-generator-es6/issues"
+  },
+  "keywords": [
+    "qr",
+    "qrcode",
+    "generator"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "documentation": "^5.3.3",
+    "tape": "^4.8.0"
+  }
+}
