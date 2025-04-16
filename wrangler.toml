@@ -4,7 +4,8 @@ compatibility_flags = ["nodejs_compat"]
 main = "./public/qr-worker.js"
 
 [build]
-command = ""
+upload_format = "modules"
+module_type = "esm"
 
 [site]
 bucket = "./public"
@@ -17,4 +18,7 @@ QR_CELL_SIZE = "3"
 EDGE_THRESHOLD = "50"
 
 [env.production]
-CF_PAGES_CACHE_BUST = "v4"  # 按需调整
+CF_PAGES_CACHE_BUST = "v1"  # 按需调整
+
+[[rules]]
+type = "ESModule"
