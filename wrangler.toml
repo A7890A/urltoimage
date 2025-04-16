@@ -1,5 +1,5 @@
 name = "hidden-qr"
-compatibility_date = "2025-04-13"
+compatibility_date = "2025-04-16"
 compatibility_flags = ["nodejs_compat"]
 main = "./public/qr-worker.js"
 
@@ -21,4 +21,5 @@ EDGE_THRESHOLD = "50"
 CF_PAGES_CACHE_BUST = "v1"  # 按需调整
 
 [[rules]]
+globs = ["**/*.js"]  # 添加globs字段指定匹配规则
 type = "ESModule"
