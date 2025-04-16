@@ -1,9 +1,9 @@
 // app.js
 class QRGenerator {
   constructor() {
-    this.worker = new Worker(new URL('./qr-worker.js',import.meta.url){
-        type:'module'
-    });
+   this.worker = new Worker('./qr-worker.js', {
+  type: 'module'
+});
     this.initEventListeners();
     this.setupDeviceCheck();
   }
