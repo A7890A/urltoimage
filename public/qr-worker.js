@@ -1,5 +1,5 @@
 // public/qr-worker.js (前端Web Worker版本)
-import QRCode from './lib/qrcode.js';
+import QRCode from './lib/qrcode/lib/core/qrcode.js';
 
 class QRProcessor {
   static generateQRMatrix(url, size) {
